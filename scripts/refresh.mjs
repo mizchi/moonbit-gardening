@@ -8,9 +8,18 @@ import {
   mergeInventory,
 } from "../src/inventory.mjs";
 
-const ghqRoot = execFileSync("ghq", ["root"], { encoding: "utf8" }).trim();
+const commandEnv = { ...process.env };
+delete commandEnv.DEVELOPER_DIR;
+delete commandEnv.SDKROOT;
+commandEnv.PATH = `/etc/profiles/per-user/${commandEnv.USER}/bin:${commandEnv.PATH}`;
+
+const ghqRoot = execFileSync("ghq", ["root"], {
+  encoding: "utf8",
+  env: commandEnv,
+}).trim();
 const repositoryPaths = execFileSync("ghq", ["list", "-p"], {
   encoding: "utf8",
+  env: commandEnv,
 })
   .trim()
   .split("\n")

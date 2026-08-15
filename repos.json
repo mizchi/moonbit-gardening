@@ -11,7 +11,8 @@
     "upstream": "origin/feat/vrt-research",
     "sync": "equal",
     "repository": "github.com/bit-vcs/bithub",
-    "module": "bit-vcs/bithub"
+    "module": "bit-vcs/bithub",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -25,7 +26,8 @@
     "upstream": "origin/master",
     "sync": "diverged",
     "repository": "github.com/jtenner/starshine-mb",
-    "module": "jtenner/starshine"
+    "module": "jtenner/starshine",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -39,7 +41,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/actrun",
-    "module": "mizchi/actrun"
+    "module": "mizchi/actrun",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -53,7 +56,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/agent-cluster",
-    "module": "mizchi/agent-cluster"
+    "module": "mizchi/agent-cluster",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -67,7 +71,8 @@
     "upstream": "origin/feat/rust-printer",
     "sync": "equal",
     "repository": "github.com/mizchi/ast_printer",
-    "module": "mizchi/ast_printer"
+    "module": "mizchi/ast_printer",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -81,7 +86,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/ast_printer.mbt",
-    "module": "mizchi/ast_printer"
+    "module": "mizchi/ast_printer",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -95,7 +101,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/async",
-    "module": "moonbitlang/async"
+    "module": "moonbitlang/async",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -104,26 +111,28 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-02-11",
-    "dirty": true,
-    "upstream": "origin/codex/blas-0-8-support",
-    "sync": "equal",
-    "repository": "github.com/mizchi/blas",
-    "module": "mizchi/blas"
-  },
-  {
-    "status": "untriaged",
-    "priority": "normal",
-    "notes": "",
-    "lastVerified": null,
-    "moonVersion": null,
-    "checks": {},
-    "lastCommit": "2026-03-10",
-    "dirty": true,
+    "lastCommit": "2026-08-15",
+    "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
+    "repository": "github.com/mizchi/blas",
+    "module": "mizchi/blas",
+    "dependencies": []
+  },
+  {
+    "status": "untriaged",
+    "priority": "normal",
+    "notes": "",
+    "lastVerified": null,
+    "moonVersion": null,
+    "checks": {},
+    "lastCommit": "2026-08-16",
+    "dirty": false,
+    "upstream": "origin/main",
+    "sync": "ahead",
     "repository": "github.com/mizchi/brotli",
-    "module": "mizchi/brotli"
+    "module": "mizchi/brotli",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -137,7 +146,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/cloudflare-starterkit-mbt",
-    "module": "mizchi/cloudflare-starterkit-mbt"
+    "module": "mizchi/cloudflare-starterkit-mbt",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -146,12 +156,16 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-02-26",
-    "dirty": true,
+    "lastCommit": "2026-08-16",
+    "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/cloudflare.mbt",
-    "module": "mizchi/cloudflare"
+    "module": "mizchi/cloudflare",
+    "dependencies": [
+      "moonbitlang/async",
+      "mizchi/js"
+    ]
   },
   {
     "status": "untriaged",
@@ -165,7 +179,8 @@
     "upstream": "origin/codex/codegen-mbt-0-8-support",
     "sync": "equal",
     "repository": "github.com/mizchi/codegen.mbt",
-    "module": "mizchi/codegen"
+    "module": "mizchi/codegen",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -179,7 +194,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/converge",
-    "module": "mizchi/converge"
+    "module": "mizchi/converge",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -193,7 +209,13 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/converge_audit",
-    "module": "mizchi/converge_audit"
+    "module": "mizchi/converge_audit",
+    "dependencies": [
+      "mizchi/converge",
+      "mizchi/experimental_crypto",
+      "mizchi/quint_connect",
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -207,7 +229,8 @@
     "upstream": "origin/main",
     "sync": "ahead",
     "repository": "github.com/mizchi/core",
-    "module": "moonbitlang/core"
+    "module": "moonbitlang/core",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -221,7 +244,8 @@
     "upstream": "origin/unicode-predicate-fast",
     "sync": "diverged",
     "repository": "github.com/mizchi/core-unicode-pred",
-    "module": "moonbitlang/core"
+    "module": "moonbitlang/core",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -235,7 +259,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/core-upstream-main",
-    "module": "moonbitlang/core"
+    "module": "moonbitlang/core",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -249,7 +274,15 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/crater",
-    "module": "mizchi/crater"
+    "module": "mizchi/crater",
+    "dependencies": [
+      "mizchi/css",
+      "mizchi/crater-dom",
+      "mizchi/crater-layout",
+      "mizchi/crater-webvitals",
+      "mizchi/crater-painter",
+      "mizchi/crater-renderer"
+    ]
   },
   {
     "status": "untriaged",
@@ -263,7 +296,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/css",
-    "module": "mizchi/css"
+    "module": "mizchi/css",
+    "dependencies": []
   },
   {
     "status": "passing",
@@ -284,7 +318,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/cst.mbt",
-    "module": "mizchi/cst"
+    "module": "mizchi/cst",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -298,7 +333,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/differentiable_ecs",
-    "module": "mizchi/differentiable_ecs"
+    "module": "mizchi/differentiable_ecs",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -312,7 +348,10 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/effectts-vs-moonbit",
-    "module": "mizchi/effectts-vs-moonbit"
+    "module": "mizchi/effectts-vs-moonbit",
+    "dependencies": [
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -326,7 +365,10 @@
     "upstream": "origin/main",
     "sync": "ahead",
     "repository": "github.com/mizchi/experimental_crypto",
-    "module": "mizchi/experimental_crypto"
+    "module": "mizchi/experimental_crypto",
+    "dependencies": [
+      "moonbitlang/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -340,7 +382,8 @@
     "upstream": "origin/main",
     "sync": "ahead",
     "repository": "github.com/mizchi/flaker-cloud",
-    "module": "mizchi/flaker-cloud"
+    "module": "mizchi/flaker-cloud",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -354,7 +397,31 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/folddown",
-    "module": "mizchi/folddown"
+    "module": "mizchi/folddown",
+    "dependencies": [
+      "mizchi/markdown"
+    ]
+  },
+  {
+    "status": "untriaged",
+    "priority": "normal",
+    "notes": "",
+    "lastVerified": null,
+    "moonVersion": null,
+    "checks": {},
+    "lastCommit": "2026-08-16",
+    "dirty": false,
+    "upstream": "origin/main",
+    "sync": "equal",
+    "repository": "github.com/mizchi/font",
+    "module": "mizchi/font",
+    "dependencies": [
+      "mizchi/svg",
+      "mizchi/pixelmatch",
+      "mizchi/zlib",
+      "mizchi/brotli",
+      "moonbitlang/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -368,7 +435,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/gfx-mbt",
-    "module": "mizchi/gfx"
+    "module": "mizchi/gfx",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -377,12 +445,16 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-04-05",
-    "dirty": true,
+    "lastCommit": "2026-08-16",
+    "dirty": false,
     "upstream": "origin/master",
     "sync": "equal",
     "repository": "github.com/mizchi/github",
-    "module": "mizchi/github"
+    "module": "mizchi/github",
+    "dependencies": [
+      "moonbitlang/x",
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -396,7 +468,23 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/gitignore.mbt",
-    "module": "mizchi/gitignore"
+    "module": "mizchi/gitignore",
+    "dependencies": []
+  },
+  {
+    "status": "untriaged",
+    "priority": "normal",
+    "notes": "",
+    "lastVerified": null,
+    "moonVersion": null,
+    "checks": {},
+    "lastCommit": "2026-08-16",
+    "dirty": false,
+    "upstream": "origin/main",
+    "sync": "equal",
+    "repository": "github.com/mizchi/glfw-mbt",
+    "module": "mizchi/glfw",
+    "dependencies": []
   },
   {
     "status": "passing",
@@ -412,11 +500,14 @@
       "pullRequest": "https://github.com/mizchi/image-mbt/pull/4"
     },
     "lastCommit": "2026-07-20",
-    "dirty": true,
+    "dirty": false,
     "upstream": "origin/main",
     "sync": "diverged",
     "repository": "github.com/mizchi/image-mbt",
-    "module": "mizchi/image"
+    "module": "mizchi/image",
+    "dependencies": [
+      "mizchi/zlib"
+    ]
   },
   {
     "status": "untriaged",
@@ -430,7 +521,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/inventory-game",
-    "module": "mizchi/inventory-game"
+    "module": "mizchi/inventory-game",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -444,7 +536,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/js.mbt",
-    "module": "mizchi/js"
+    "module": "mizchi/js",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -458,7 +551,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/jwt.mbt",
-    "module": "mizchi/jwt.mbt"
+    "module": "mizchi/jwt.mbt",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -472,7 +566,17 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/kagura",
-    "module": "mizchi/kagura"
+    "module": "mizchi/kagura",
+    "dependencies": [
+      "mizchi/kagura_core",
+      "mizchi/kagura_engine",
+      "mizchi/image",
+      "mizchi/font",
+      "mizchi/audio",
+      "mizchi/svg",
+      "mizchi/glfw",
+      "mizchi/gfx"
+    ]
   },
   {
     "status": "untriaged",
@@ -481,12 +585,13 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-03-21",
-    "dirty": true,
+    "lastCommit": "2026-08-15",
+    "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/layout",
-    "module": "mizchi/layout"
+    "module": "mizchi/layout",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -495,12 +600,31 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-02-11",
-    "dirty": true,
-    "upstream": "origin/codex/lsp-mbt-0-8-support",
+    "lastCommit": "2026-08-16",
+    "dirty": false,
+    "upstream": "origin/main",
     "sync": "equal",
+    "repository": "github.com/mizchi/llm",
+    "module": "mizchi/llm",
+    "dependencies": [
+      "mizchi/x",
+      "moonbitlang/async"
+    ]
+  },
+  {
+    "status": "untriaged",
+    "priority": "normal",
+    "notes": "",
+    "lastVerified": null,
+    "moonVersion": null,
+    "checks": {},
+    "lastCommit": "2026-08-15",
+    "dirty": false,
+    "upstream": null,
+    "sync": "no-upstream",
     "repository": "github.com/mizchi/lsp.mbt",
-    "module": "mizchi/lsp"
+    "module": "mizchi/lsp",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -514,7 +638,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/m8m",
-    "module": "mizchi/m8m"
+    "module": "mizchi/m8m",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -528,7 +653,14 @@
     "upstream": "origin/agent/release-0-7-0",
     "sync": "equal",
     "repository": "github.com/mizchi/markdown.mbt",
-    "module": "mizchi/markdown"
+    "module": "mizchi/markdown",
+    "dependencies": [
+      "moonbitlang/parser",
+      "moonbitlang/x",
+      "moonbitlang/yacc",
+      "mizchi/syntree",
+      "mizchi/moomaid"
+    ]
   },
   {
     "status": "untriaged",
@@ -542,7 +674,12 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/mars.mbt",
-    "module": "mizchi/mars"
+    "module": "mizchi/mars",
+    "dependencies": [
+      "moonbitlang/async",
+      "moonbitlang/x",
+      "mizchi/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -556,7 +693,10 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/mayo",
-    "module": "mizchi/mayo"
+    "module": "mizchi/mayo",
+    "dependencies": [
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -570,7 +710,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/mbt_rs",
-    "module": "mizchi/mbt_rs"
+    "module": "mizchi/mbt_rs",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -584,7 +725,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/mbt-blockly",
-    "module": "mizchi/mbt-blockly"
+    "module": "mizchi/mbt-blockly",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -598,7 +740,8 @@
     "upstream": "origin/codex/mbts-0-8-support",
     "sync": "equal",
     "repository": "github.com/mizchi/mbts",
-    "module": "mizchi/mbts"
+    "module": "mizchi/mbts",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -612,7 +755,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/mnemo",
-    "module": "mizchi/mnemo"
+    "module": "mizchi/mnemo",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -626,7 +770,19 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/moomaid",
-    "module": "mizchi/moomaid"
+    "module": "mizchi/moomaid",
+    "dependencies": [
+      "moonbitlang/async",
+      "mizchi/syntree",
+      "mizchi/tui",
+      "mizchi/signals",
+      "moonbitlang/x",
+      "mizchi/svg",
+      "mizchi/font",
+      "mizchi/crater-layout",
+      "mizchi/crater-core",
+      "mizchi/css"
+    ]
   },
   {
     "status": "untriaged",
@@ -635,12 +791,13 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-04-25",
-    "dirty": true,
+    "lastCommit": "2026-08-16",
+    "dirty": false,
     "upstream": "origin/main",
-    "sync": "equal",
+    "sync": "ahead",
     "repository": "github.com/mizchi/moon-component",
-    "module": "mizchi/moon_component"
+    "module": "mizchi/moon_component",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -654,7 +811,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/moon-install",
-    "module": "mizchi/moon-install"
+    "module": "mizchi/moon-install",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -663,12 +821,13 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-02-11",
-    "dirty": true,
-    "upstream": "origin/codex/moonbit-jsonschema-0-8-support",
+    "lastCommit": "2026-08-16",
+    "dirty": false,
+    "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/moonbit_jsonschema",
-    "module": "mizchi/jsonschema"
+    "module": "mizchi/jsonschema",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -682,7 +841,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/moonbitlang-x",
-    "module": "moonbitlang/x"
+    "module": "moonbitlang/x",
+    "dependencies": []
   },
   {
     "status": "blocked",
@@ -695,12 +855,21 @@
       "check": "blocked",
       "pullRequest": "https://github.com/mizchi/moonix/pull/1"
     },
-    "lastCommit": "2026-02-11",
-    "dirty": true,
+    "lastCommit": "2026-08-16",
+    "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/moonix",
-    "module": "mizchi/moonix"
+    "module": "mizchi/moonix",
+    "dependencies": [
+      "mizchi/ripple",
+      "moonbitlang/x",
+      "mizchi/wasi_interface",
+      "mizchi/bit_io",
+      "mizchi/bit_types",
+      "mizchi/bit_object",
+      "mizchi/bit_lib"
+    ]
   },
   {
     "status": "untriaged",
@@ -714,7 +883,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/moonlight",
-    "module": "mizchi/moonlight"
+    "module": "mizchi/moonlight",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -728,7 +898,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/nanobot.mbt",
-    "module": "mizchi/nanobot"
+    "module": "mizchi/nanobot",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -742,7 +913,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/nn",
-    "module": "mizchi/nn"
+    "module": "mizchi/nn",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -756,7 +928,12 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/npm_typed.mbt",
-    "module": "mizchi/npm_typed"
+    "module": "mizchi/npm_typed",
+    "dependencies": [
+      "moonbitlang/async",
+      "mizchi/js",
+      "mizchi/js_browser"
+    ]
   },
   {
     "status": "untriaged",
@@ -765,12 +942,15 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-05-27",
+    "lastCommit": "2026-08-15",
     "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/numbt",
-    "module": "mizchi/numbt"
+    "module": "mizchi/numbt",
+    "dependencies": [
+      "mizchi/blas"
+    ]
   },
   {
     "status": "untriaged",
@@ -784,7 +964,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/oci_wasm",
-    "module": "mizchi/oci_wasm"
+    "module": "mizchi/oci_wasm",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -798,7 +979,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/pi_ext",
-    "module": "mizchi/pi"
+    "module": "mizchi/pi",
+    "dependencies": []
   },
   {
     "status": "passing",
@@ -819,7 +1001,17 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/pickle-mbt",
-    "module": "mizchi/pkl"
+    "module": "mizchi/pkl",
+    "dependencies": [
+      "mizchi/cst",
+      "mizchi/ripple",
+      "mizchi/x",
+      "mizchi/zlib",
+      "moonbitlang/async",
+      "moonbitlang/regexp",
+      "moonbitlang/x",
+      "moonbit-community/yaml"
+    ]
   },
   {
     "status": "untriaged",
@@ -833,7 +1025,10 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/pixelmatch",
-    "module": "mizchi/pixelmatch"
+    "module": "mizchi/pixelmatch",
+    "dependencies": [
+      "mizchi/image"
+    ]
   },
   {
     "status": "untriaged",
@@ -847,7 +1042,15 @@
     "upstream": "origin/main",
     "sync": "behind",
     "repository": "github.com/mizchi/pkfire",
-    "module": "mizchi/pkf"
+    "module": "mizchi/pkf",
+    "dependencies": [
+      "mizchi/fswatch",
+      "mizchi/pkl",
+      "mizchi/x",
+      "mizchi/zlib",
+      "moonbitlang/async",
+      "moonbitlang/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -861,7 +1064,17 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/pkl-mbt",
-    "module": "mizchi/pkl"
+    "module": "mizchi/pkl",
+    "dependencies": [
+      "mizchi/cst",
+      "mizchi/ripple",
+      "mizchi/x",
+      "mizchi/zlib",
+      "moonbitlang/async",
+      "moonbitlang/regexp",
+      "moonbitlang/x",
+      "moonbit-community/yaml"
+    ]
   },
   {
     "status": "untriaged",
@@ -875,7 +1088,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/pkspec",
-    "module": "mizchi/pkspec"
+    "module": "mizchi/pkspec",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -889,7 +1103,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/playwright.mbt",
-    "module": "mizchi/playwright"
+    "module": "mizchi/playwright",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -903,7 +1118,10 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/quint-connect-moonbit",
-    "module": "mizchi/quint_connect"
+    "module": "mizchi/quint_connect",
+    "dependencies": [
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -917,7 +1135,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/ripple",
-    "module": "mizchi/ripple"
+    "module": "mizchi/ripple",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -931,7 +1150,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/rkyv-mbt",
-    "module": "mizchi/rkyv"
+    "module": "mizchi/rkyv",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -945,7 +1165,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/s3",
-    "module": "mizchi/s3"
+    "module": "mizchi/s3",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -959,7 +1180,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/sandbox.mbt",
-    "module": "mizchi/sandbox"
+    "module": "mizchi/sandbox",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -968,12 +1190,13 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-02-11",
-    "dirty": true,
-    "upstream": "origin/codex/semver-0.1.1",
+    "lastCommit": "2026-08-15",
+    "dirty": false,
+    "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/semver.mbt",
-    "module": "mizchi/semver"
+    "module": "mizchi/semver",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -987,7 +1210,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/signals",
-    "module": "mizchi/signals"
+    "module": "mizchi/signals",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1001,7 +1225,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/simd",
-    "module": "mizchi/simd"
+    "module": "mizchi/simd",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1015,7 +1240,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/similarity.mbt",
-    "module": "mizchi/similarity"
+    "module": "mizchi/similarity",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1029,7 +1255,8 @@
     "upstream": "origin/chore/retire",
     "sync": "equal",
     "repository": "github.com/mizchi/sol.mbt",
-    "module": "mizchi/sol"
+    "module": "mizchi/sol",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1043,7 +1270,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/sqlc_gen_moonbit",
-    "module": "mizchi/sqlc_gen_moonbit"
+    "module": "mizchi/sqlc_gen_moonbit",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1057,7 +1285,11 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/starlint",
-    "module": "mizchi/starlint"
+    "module": "mizchi/starlint",
+    "dependencies": [
+      "moonbitlang/parser",
+      "moonbitlang/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -1066,12 +1298,13 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-04-25",
-    "dirty": true,
+    "lastCommit": "2026-08-16",
+    "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/svg",
-    "module": "mizchi/svg"
+    "module": "mizchi/svg",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1080,12 +1313,13 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-02-11",
-    "dirty": true,
-    "upstream": "origin/codex/syntree-mbt-0-8-support",
+    "lastCommit": "2026-08-15",
+    "dirty": false,
+    "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/syntree.mbt",
-    "module": "mizchi/syntree"
+    "module": "mizchi/syntree",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1099,7 +1333,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/terrain",
-    "module": "mizchi/terrain"
+    "module": "mizchi/terrain",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1113,7 +1348,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/threads",
-    "module": "mizchi/threads"
+    "module": "mizchi/threads",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1127,7 +1363,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/tomate",
-    "module": "mizchi/tomate"
+    "module": "mizchi/tomate",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1141,7 +1378,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/tornado",
-    "module": "mizchi/tornado"
+    "module": "mizchi/tornado",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1155,7 +1393,11 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/ts.mbt",
-    "module": "mizchi/ts"
+    "module": "mizchi/ts",
+    "dependencies": [
+      "moonbitlang/async",
+      "mizchi/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -1169,7 +1411,18 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/tui.mbt",
-    "module": "mizchi/tui"
+    "module": "mizchi/tui",
+    "dependencies": [
+      "mizchi/layout",
+      "mizchi/crater-core",
+      "mizchi/crater-layout",
+      "mizchi/css",
+      "mizchi/signals",
+      "mizchi/tui-terminal-buffer",
+      "moonbitlang/async",
+      "mizchi/syntree",
+      "moonbitlang/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -1183,7 +1436,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/uploda",
-    "module": "mizchi/uploda"
+    "module": "mizchi/uploda",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1197,7 +1451,10 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/v8.mbt",
-    "module": "mizchi/v8"
+    "module": "mizchi/v8",
+    "dependencies": [
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -1206,12 +1463,17 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-04-05",
-    "dirty": true,
+    "lastCommit": "2026-08-15",
+    "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/vfs",
-    "module": "mizchi/vfs"
+    "module": "mizchi/vfs",
+    "dependencies": [
+      "moonbitlang/async",
+      "mizchi/s3",
+      "mizchi/js"
+    ]
   },
   {
     "status": "untriaged",
@@ -1225,7 +1487,22 @@
     "upstream": "origin/feat/thread",
     "sync": "ahead",
     "repository": "github.com/mizchi/vibe-lang-feat-thread",
-    "module": "mizchi/vibe"
+    "module": "mizchi/vibe",
+    "dependencies": [
+      "mizchi/bit",
+      "mizchi/cst",
+      "mizchi/ripple",
+      "mizchi/tui",
+      "mizchi/x",
+      "moonbitlang/async",
+      "moonbitlang/x",
+      "mizchi/cbor",
+      "mizchi/flatbuffers",
+      "mizchi/wite",
+      "mizchi/similarity",
+      "mizchi/mwac",
+      "moonbitlang/parser"
+    ]
   },
   {
     "status": "untriaged",
@@ -1239,7 +1516,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/vivebox",
-    "module": "mizchi/vivebox"
+    "module": "mizchi/vivebox",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1253,7 +1531,8 @@
     "upstream": "origin/codex/wasi-mbt-0-8-support",
     "sync": "equal",
     "repository": "github.com/mizchi/wasi.mbt",
-    "module": "mizchi/wasi"
+    "module": "mizchi/wasi",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1267,7 +1546,8 @@
     "upstream": "origin/feat/thread-runtime",
     "sync": "equal",
     "repository": "github.com/mizchi/wasmtime.mbt",
-    "module": "mizchi/wasmtime"
+    "module": "mizchi/wasmtime",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1281,7 +1561,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/wasmtime.mbt-main",
-    "module": "mizchi/wasmtime"
+    "module": "mizchi/wasmtime",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1295,7 +1576,8 @@
     "upstream": "origin/feat/component-model",
     "sync": "equal",
     "repository": "github.com/mizchi/wasmx",
-    "module": "mizchi/wasmx"
+    "module": "mizchi/wasmx",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1309,7 +1591,10 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/webnn-playground",
-    "module": "mizchi/webnn"
+    "module": "mizchi/webnn",
+    "dependencies": [
+      "mizchi/js"
+    ]
   },
   {
     "status": "untriaged",
@@ -1323,7 +1608,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/whenword-mbt",
-    "module": "mizchi/whenwords"
+    "module": "mizchi/whenwords",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1337,7 +1623,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/whisper-mbt",
-    "module": "mizchi/whisper"
+    "module": "mizchi/whisper",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1351,7 +1638,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/wit-bindgen-moonbit",
-    "module": "mizchi/wit_bindgen_mbt"
+    "module": "mizchi/wit_bindgen_mbt",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1360,12 +1648,15 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-07-07",
+    "lastCommit": "2026-08-16",
     "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/wit.mbt",
-    "module": "mizchi/wit"
+    "module": "mizchi/wit",
+    "dependencies": [
+      "moonbitlang/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -1374,12 +1665,20 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-03-22",
-    "dirty": true,
-    "upstream": "origin/main",
-    "sync": "diverged",
+    "lastCommit": "2026-08-16",
+    "dirty": false,
+    "upstream": null,
+    "sync": "no-upstream",
     "repository": "github.com/mizchi/wite",
-    "module": "mizchi/wite"
+    "module": "mizchi/wite",
+    "dependencies": [
+      "moonbitlang/async",
+      "moonbitlang/x",
+      "mizchi/mwac",
+      "mizchi/wit",
+      "mizchi/oci_wasm",
+      "mizchi/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -1388,12 +1687,17 @@
     "lastVerified": null,
     "moonVersion": null,
     "checks": {},
-    "lastCommit": "2026-07-29",
+    "lastCommit": "2026-08-16",
     "dirty": true,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/x",
-    "module": "mizchi/x"
+    "module": "mizchi/x",
+    "dependencies": [
+      "moonbitlang/async",
+      "moonbitlang/x",
+      "moonbitlang/regexp"
+    ]
   },
   {
     "status": "untriaged",
@@ -1407,7 +1711,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/mizchi/x-async",
-    "module": "moonbitlang/async"
+    "module": "moonbitlang/async",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1421,7 +1726,11 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/zlib",
-    "module": "mizchi/zlib"
+    "module": "mizchi/zlib",
+    "dependencies": [
+      "moonbitlang/x",
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "passing",
@@ -1442,7 +1751,11 @@
     "upstream": "origin/release/0.4.5",
     "sync": "equal",
     "repository": "github.com/mizchi/zlib.mbt",
-    "module": "mizchi/zlib"
+    "module": "mizchi/zlib",
+    "dependencies": [
+      "moonbitlang/x",
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -1456,7 +1769,14 @@
     "upstream": "fork/perf/buffer-scan-stdout",
     "sync": "equal",
     "repository": "github.com/moonbit-community/moongrep",
-    "module": "moonbit-community/moongrep"
+    "module": "moonbit-community/moongrep",
+    "dependencies": [
+      "moonbitlang/parser",
+      "moonbit-community/yaml",
+      "moonbit-community/chalk",
+      "moonbitlang/lexer",
+      "moonbitlang/async"
+    ]
   },
   {
     "status": "untriaged",
@@ -1470,7 +1790,8 @@
     "upstream": "origin/main",
     "sync": "diverged",
     "repository": "github.com/moonbit-community/postgres.mbt",
-    "module": "myfreess/postgres"
+    "module": "myfreess/postgres",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1484,7 +1805,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/moonbit-community/verified",
-    "module": "moonbit-community/verified"
+    "module": "moonbit-community/verified",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1498,7 +1820,8 @@
     "upstream": "origin/main",
     "sync": "behind",
     "repository": "github.com/moonbit-community/wasip1",
-    "module": "peter-jerry-ye/wasi"
+    "module": "peter-jerry-ye/wasi",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1512,7 +1835,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/moonbit-community/wasip2",
-    "module": "mizchi/wasip2"
+    "module": "mizchi/wasip2",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1526,7 +1850,8 @@
     "upstream": "origin/main",
     "sync": "behind",
     "repository": "github.com/moonbitlang/async",
-    "module": "moonbitlang/async"
+    "module": "moonbitlang/async",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1540,7 +1865,8 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/moonbitlang/core",
-    "module": "moonbitlang/core"
+    "module": "moonbitlang/core",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1554,7 +1880,8 @@
     "upstream": null,
     "sync": "no-upstream",
     "repository": "github.com/moonbitlang/maria",
-    "module": "moonbitlang/maria"
+    "module": "moonbitlang/maria",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1568,7 +1895,8 @@
     "upstream": "origin/master",
     "sync": "behind",
     "repository": "github.com/moonbitlang/mbtcc",
-    "module": "Kaida-Amethyst/mbtcc"
+    "module": "Kaida-Amethyst/mbtcc",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1582,7 +1910,8 @@
     "upstream": "origin/master",
     "sync": "equal",
     "repository": "github.com/moonbitlang/moonyacc",
-    "module": "moonbitlang/yacc"
+    "module": "moonbitlang/yacc",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1596,7 +1925,16 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/moonbitlang/openseek",
-    "module": "bobzhang/openseek"
+    "module": "bobzhang/openseek",
+    "dependencies": [
+      "moonbit-community/tty",
+      "moonbitlang/async",
+      "moonbitlang/x",
+      "moonbit-community/displaytext",
+      "tonyfettes/xlog",
+      "bobzhang/jsonl",
+      "moonbit-community/rabbita"
+    ]
   },
   {
     "status": "untriaged",
@@ -1610,7 +1948,8 @@
     "upstream": "origin/master",
     "sync": "ahead",
     "repository": "github.com/moonbitlang/parser",
-    "module": "moonbitlang/parser"
+    "module": "moonbitlang/parser",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1624,7 +1963,8 @@
     "upstream": "origin/master",
     "sync": "behind",
     "repository": "github.com/moonbitlang/wasm5",
-    "module": "moonbitlang/wasm5"
+    "module": "moonbitlang/wasm5",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1638,7 +1978,8 @@
     "upstream": "origin/main",
     "sync": "behind",
     "repository": "github.com/moonbitlang/x",
-    "module": "moonbitlang/x"
+    "module": "moonbitlang/x",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1652,7 +1993,11 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/oboard/mocket",
-    "module": "oboard/mocket"
+    "module": "oboard/mocket",
+    "dependencies": [
+      "moonbitlang/async",
+      "moonbitlang/x"
+    ]
   },
   {
     "status": "untriaged",
@@ -1666,7 +2011,8 @@
     "upstream": "fork/optimize-ssr-rendering",
     "sync": "equal",
     "repository": "github.com/SouichiroTsujimoto/astrobit",
-    "module": "SouichiroTsujimoto/astrobit"
+    "module": "SouichiroTsujimoto/astrobit",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1680,7 +2026,8 @@
     "upstream": "fork/feat/tsed-redesign",
     "sync": "equal",
     "repository": "github.com/trkbt10/indexion",
-    "module": "trkbt10/indexion"
+    "module": "trkbt10/indexion",
+    "dependencies": []
   },
   {
     "status": "untriaged",
@@ -1694,6 +2041,7 @@
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/ushironoko/gitfilm",
-    "module": "ushironoko/gitfilm"
+    "module": "ushironoko/gitfilm",
+    "dependencies": []
   }
 ]

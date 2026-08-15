@@ -33,6 +33,7 @@ test("inspectRepository recognizes a MoonBit repository", async () => {
   assert.deepEqual(await inspectRepository(repo, root, async () => gitState), {
     repository: "github.com/mizchi/example",
     module: "mizchi/example",
+    dependencies: [],
     ...gitState,
   });
 });
@@ -43,7 +44,13 @@ test("inspectRepository recognizes a MoonBit repository with moon.mod", async ()
   await mkdir(repo, { recursive: true });
   await writeFile(
     join(repo, "moon.mod"),
-    'name = "mizchi/example-pkl"\nversion = "0.1.0"\n',
+    `name = "mizchi/example-pkl"
+version = "0.1.0"
+import {
+  "mizchi/x@0.5.3",
+  "moonbitlang/async@0.20.5",
+}
+`,
   );
 
   const gitState = {
@@ -55,6 +62,7 @@ test("inspectRepository recognizes a MoonBit repository with moon.mod", async ()
   assert.deepEqual(await inspectRepository(repo, root, async () => gitState), {
     repository: "github.com/mizchi/example-pkl",
     module: "mizchi/example-pkl",
+    dependencies: ["mizchi/x", "moonbitlang/async"],
     ...gitState,
   });
 });
@@ -83,7 +91,11 @@ test("inspectRepository ignores stale Git worktrees", async () => {
 
 test("mergeInventory preserves gardening state", () => {
   const discovered = [
-    { repository: "github.com/mizchi/example", module: "mizchi/example" },
+    {
+      repository: "github.com/mizchi/example",
+      module: "mizchi/example",
+      dependencies: ["mizchi/x"],
+    },
   ];
   const existing = [
     {
@@ -99,6 +111,7 @@ test("mergeInventory preserves gardening state", () => {
     {
       repository: "github.com/mizchi/example",
       module: "mizchi/example",
+      dependencies: ["mizchi/x"],
       status: "in-progress",
       priority: "high",
       notes: "API migration",

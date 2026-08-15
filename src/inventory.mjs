@@ -29,6 +29,7 @@ async function git(repositoryPath, args) {
   const env = { ...process.env };
   delete env.DEVELOPER_DIR;
   delete env.SDKROOT;
+  env.PATH = `/etc/profiles/per-user/${env.USER}/bin:${env.PATH}`;
   const { stdout } = await execFileAsync("git", ["-C", repositoryPath, ...args], {
     encoding: "utf8",
     env,
@@ -91,15 +92,33 @@ export function isCanonicalGitHubRepository(repository) {
   return segments.length === 3 && segments[0] === "github.com";
 }
 
+function moduleName(specifier) {
+  return specifier.split("@")[0];
+}
+
 function parseMoonMod(source) {
   const match = source.match(/^\s*name\s*=\s*"([^"]+)"\s*$/m);
-  return { name: match?.[1] ?? null };
+  const importBlock = source.match(/^\s*import\s*\{([\s\S]*?)^\s*\}/m)?.[1] ?? "";
+  const dependencies = [...importBlock.matchAll(/"([^"]+)"/g)].map((entry) =>
+    moduleName(entry[1]),
+  );
+  return { name: match?.[1] ?? null, dependencies };
+}
+
+function normalizeManifest(manifest) {
+  const imports = manifest.import ?? [];
+  const dependencies = Array.isArray(imports)
+    ? imports.map((entry) =>
+        moduleName(typeof entry === "string" ? entry : entry.path),
+      )
+    : Object.keys(imports).map(moduleName);
+  return { ...manifest, dependencies };
 }
 
 async function readManifest(repositoryPath) {
   try {
-    return JSON.parse(
-      await readFile(`${repositoryPath}/moon.mod.json`, "utf8"),
+    return normalizeManifest(
+      JSON.parse(await readFile(`${repositoryPath}/moon.mod.json`, "utf8")),
     );
   } catch (error) {
     if (error.code !== "ENOENT") throw error;
@@ -131,6 +150,7 @@ export async function inspectRepository(
   return {
     repository: relative(ghqRoot, repositoryPath).split(sep).join("/"),
     module: manifest.name ?? null,
+    dependencies: manifest.dependencies,
     ...gitState,
   };
 }

@@ -1,0 +1,117 @@
+///|
+import {
+  "moonbitlang/async@0.20.5",
+  "moonbitlang/async@0.20.5/io",
+  "moonbitlang/core/env",
+  "moonbitlang/core/json",
+  "mizchi/x@0.5.3/fs",
+}
+
+///|
+fn json_string_field(value : Json, field : String) -> String? {
+  match value {
+    Json::Object(entries) =>
+      match entries.get(field) {
+        Some(Json::String(text)) => Some(text)
+        _ => None
+      }
+    _ => None
+  }
+}
+
+///|
+fn json_string_array_field(value : Json, field : String) -> Array[String] {
+  match value {
+    Json::Object(entries) =>
+      match entries.get(field) {
+        Some(Json::Array(values)) => values.filter_map(fn(item) {
+            match item {
+              Json::String(text) => Some(text)
+              _ => None
+            }
+          })
+        _ => []
+      }
+    _ => []
+  }
+}
+
+///|
+fn dependency_order(source : String) -> Array[String] raise {
+  let inventory = match @json.parse(source) {
+    Json::Array(items) => items
+    _ => raise Failure::Failure("inventory must be a JSON array")
+  }
+  let dependencies : Map[String, Array[String]] = Map([])
+  for item in inventory {
+    match json_string_field(item, "module") {
+      Some(module_name) if module_name.has_prefix("mizchi/") =>
+        dependencies[module_name] = json_string_array_field(item, "dependencies")
+      _ => ()
+    }
+  }
+
+  let indegree : Map[String, Int] = Map([])
+  let dependents : Map[String, Array[String]] = Map([])
+  for module_name, _ in dependencies {
+    indegree[module_name] = 0
+    dependents[module_name] = []
+  }
+  for module_name, imported_modules in dependencies {
+    for imported in imported_modules {
+      if dependencies.contains(imported) {
+        indegree[module_name] = indegree[module_name] + 1
+        dependents[imported].push(module_name)
+      }
+    }
+  }
+
+  let ready : Array[String] = []
+  for module_name, count in indegree {
+    if count == 0 {
+      ready.push(module_name)
+    }
+  }
+  ready.sort()
+
+  let ordered : Array[String] = []
+  while !ready.is_empty() {
+    let module_name = ready.remove(0)
+    ordered.push(module_name)
+    let next_modules = dependents[module_name]
+    next_modules.sort()
+    for dependent in next_modules {
+      let next_count = indegree[dependent] - 1
+      indegree[dependent] = next_count
+      if next_count == 0 {
+        ready.push(dependent)
+        ready.sort()
+      }
+    }
+  }
+
+  if ordered.length() != dependencies.length() {
+    let cyclic : Array[String] = []
+    for module_name, count in indegree {
+      if count > 0 {
+        cyclic.push(module_name)
+      }
+    }
+    cyclic.sort()
+    raise Failure::Failure(
+      "dependency cycle detected: " + cyclic.join(", "),
+    )
+  }
+  ordered
+}
+
+///|
+async fn main raise {
+  let args = @env.args()
+  let inventory_path = if args.length() > 1 { args[1] } else { "repos.json" }
+  let source = @fs.read_file(inventory_path).text()
+  let ordered = dependency_order(source)
+  for index, module_name in ordered {
+    println((index + 1).to_string() + "\t" + module_name)
+  }
+}

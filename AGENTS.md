@@ -14,7 +14,7 @@ This repository is the inventory for maintaining `mizchi`'s published packages a
 
 ## Release migration workflow
 
-1. Run this repository's inventory command, such as `just refresh`, and inspect published versions, local versions, last update dates, and dependencies.
+1. Run `just refresh`, then run `just order` to inspect modules in dependency-first order. Also inspect published versions, local versions, and last update dates in the inventory.
 2. Work from foundational packages toward their dependents. Publish a patch release of a foundation package before pinning that published version in downstream packages.
 3. In each target repository, inspect `AGENTS.md`, the working tree, manifests, dependencies, target configuration, and existing tests.
 4. With the latest MoonBit toolchain, run `moon update`, `moon fmt`, `moon info`, and `moon check --deny-warn` to enumerate breakages and warnings.

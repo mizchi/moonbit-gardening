@@ -30,6 +30,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [bit-vcs/bithub](https://github.com/bit-vcs/bithub) | bit-vcs/bithub | 2026-07-25 | dirty | equal | untriaged | normal | — | — | — |
 | [jtenner/starshine-mb](https://github.com/jtenner/starshine-mb) | jtenner/starshine | 2026-01-28 | clean | diverged | untriaged | normal | — | — | — |
 | [mizchi/actrun](https://github.com/mizchi/actrun) | mizchi/actrun | 2026-05-26 | clean | equal | untriaged | normal | — | — | — |
+| [mizchi/admiral](https://github.com/mizchi/admiral) | mizchi/admiral | 2026-04-06 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/agent-cluster](https://github.com/mizchi/agent-cluster) | mizchi/agent-cluster | 2026-02-27 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/ast_printer](https://github.com/mizchi/ast_printer) | mizchi/ast_printer | 2026-03-25 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/ast_printer.mbt](https://github.com/mizchi/ast_printer.mbt) | mizchi/ast_printer | 2026-04-27 | clean | no-upstream | untriaged | normal | — | — | — |

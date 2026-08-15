@@ -37,7 +37,29 @@ test("inspectRepository recognizes a MoonBit repository", async () => {
   });
 });
 
-test("inspectRepository ignores repositories without moon.mod.json", async () => {
+test("inspectRepository recognizes a MoonBit repository with moon.mod", async () => {
+  const root = await mkdtemp(join(tmpdir(), "moonbit-gardening-"));
+  const repo = join(root, "github.com", "mizchi", "example-pkl");
+  await mkdir(repo, { recursive: true });
+  await writeFile(
+    join(repo, "moon.mod"),
+    'name = "mizchi/example-pkl"\nversion = "0.1.0"\n',
+  );
+
+  const gitState = {
+    lastCommit: "2026-08-15",
+    dirty: false,
+    upstream: "origin/main",
+    sync: "equal",
+  };
+  assert.deepEqual(await inspectRepository(repo, root, async () => gitState), {
+    repository: "github.com/mizchi/example-pkl",
+    module: "mizchi/example-pkl",
+    ...gitState,
+  });
+});
+
+test("inspectRepository ignores repositories without a MoonBit manifest", async () => {
   const root = await mkdtemp(join(tmpdir(), "moonbit-gardening-"));
   const repo = join(root, "github.com", "mizchi", "not-moonbit");
   await mkdir(repo, { recursive: true });

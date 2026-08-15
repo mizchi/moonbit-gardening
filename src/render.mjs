@@ -1,5 +1,5 @@
-const HEADER = `| Repository | Module | Status | Priority | Moon | Last verified | Notes |
-| --- | --- | --- | --- | --- | --- | --- |`;
+const HEADER = `| Repository | Module | Last commit | Worktree | Sync | Status | Priority | Moon | Last verified | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |`;
 
 function cell(value) {
   if (value === null || value === undefined || value === "") return "—";
@@ -10,7 +10,8 @@ export function renderTable(entries) {
   const rows = entries.map((entry) => {
     const repository = entry.repository.replace(/^github\.com\//, "");
     const link = `[${repository}](https://github.com/${repository})`;
-    return `| ${link} | ${cell(entry.module)} | ${cell(entry.status)} | ${cell(entry.priority)} | ${cell(entry.moonVersion)} | ${cell(entry.lastVerified)} | ${cell(entry.notes)} |`;
+    const worktree = entry.dirty === null ? "unknown" : entry.dirty ? "dirty" : "clean";
+    return `| ${link} | ${cell(entry.module)} | ${cell(entry.lastCommit)} | ${worktree} | ${cell(entry.sync)} | ${cell(entry.status)} | ${cell(entry.priority)} | ${cell(entry.moonVersion)} | ${cell(entry.lastVerified)} | ${cell(entry.notes)} |`;
   });
   return [HEADER, ...rows].join("\n");
 }

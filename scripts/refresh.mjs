@@ -1,5 +1,6 @@
 import { execFileSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
+import { relative, sep } from "node:path";
 
 import {
   inspectRepository,
@@ -15,11 +16,12 @@ const repositoryPaths = execFileSync("ghq", ["list", "-p"], {
   .split("\n")
   .filter(Boolean);
 
-const discovered = (
-  await Promise.all(repositoryPaths.map((path) => inspectRepository(path, ghqRoot)))
-).filter(
-  (entry) => entry && isCanonicalGitHubRepository(entry.repository),
+const canonicalPaths = repositoryPaths.filter((path) =>
+  isCanonicalGitHubRepository(relative(ghqRoot, path).split(sep).join("/")),
 );
+const discovered = (
+  await Promise.all(canonicalPaths.map((path) => inspectRepository(path, ghqRoot)))
+).filter(Boolean);
 
 let existing = [];
 try {

@@ -13,10 +13,14 @@ test("renderTable creates a linked status row", () => {
       moonVersion: "0.1.0",
       lastVerified: "2026-08-15",
       notes: "ready",
+      lastCommit: "2026-05-01",
+      dirty: false,
+      sync: "equal",
     },
   ]);
   assert.match(table, /\[mizchi\/example\]\(https:\/\/github.com\/mizchi\/example\)/);
   assert.match(table, /\| passing \| normal \| 0\.1\.0 \| 2026-08-15 \| ready \|/);
+  assert.match(table, /\| 2026-05-01 \| clean \| equal \|/);
 });
 
 test("replaceInventory only replaces the generated section", () => {

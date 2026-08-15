@@ -5,10 +5,18 @@ import { join } from "node:path";
 import test from "node:test";
 
 import {
+  classifySync,
   inspectRepository,
   isCanonicalGitHubRepository,
   mergeInventory,
 } from "../src/inventory.mjs";
+
+test("classifySync distinguishes local and upstream state", () => {
+  assert.equal(classifySync(0, 0), "equal");
+  assert.equal(classifySync(2, 0), "ahead");
+  assert.equal(classifySync(0, 3), "behind");
+  assert.equal(classifySync(1, 1), "diverged");
+});
 
 test("inspectRepository recognizes a MoonBit repository", async () => {
   const root = await mkdtemp(join(tmpdir(), "moonbit-gardening-"));
@@ -16,9 +24,16 @@ test("inspectRepository recognizes a MoonBit repository", async () => {
   await mkdir(repo, { recursive: true });
   await writeFile(join(repo, "moon.mod.json"), '{"name":"mizchi/example"}\n');
 
-  assert.deepEqual(await inspectRepository(repo, root), {
+  const gitState = {
+    lastCommit: "2026-08-15",
+    dirty: false,
+    upstream: "origin/main",
+    sync: "equal",
+  };
+  assert.deepEqual(await inspectRepository(repo, root, async () => gitState), {
     repository: "github.com/mizchi/example",
     module: "mizchi/example",
+    ...gitState,
   });
 });
 
@@ -28,6 +43,20 @@ test("inspectRepository ignores repositories without moon.mod.json", async () =>
   await mkdir(repo, { recursive: true });
 
   assert.equal(await inspectRepository(repo, root), null);
+});
+
+test("inspectRepository ignores stale Git worktrees", async () => {
+  const root = await mkdtemp(join(tmpdir(), "moonbit-gardening-"));
+  const repo = join(root, "github.com", "mizchi", "stale-worktree");
+  await mkdir(repo, { recursive: true });
+  await writeFile(join(repo, "moon.mod.json"), '{"name":"mizchi/stale"}\n');
+
+  assert.equal(
+    await inspectRepository(repo, root, async () => {
+      throw new Error("not a git repository");
+    }),
+    null,
+  );
 });
 
 test("mergeInventory preserves gardening state", () => {
@@ -54,6 +83,10 @@ test("mergeInventory preserves gardening state", () => {
       lastVerified: null,
       moonVersion: null,
       checks: {},
+      lastCommit: null,
+      dirty: null,
+      upstream: null,
+      sync: "unknown",
     },
   ]);
 });

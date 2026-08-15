@@ -53,7 +53,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/moon-install](https://github.com/mizchi/moon-install) | mizchi/moon-install | 2026-02-04 | dirty | no-upstream | untriaged | normal | — | — | — |
 | [mizchi/moonbit_jsonschema](https://github.com/mizchi/moonbit_jsonschema) | mizchi/jsonschema | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/moonbitlang-x](https://github.com/mizchi/moonbitlang-x) | moonbitlang/x | 2026-05-18 | clean | equal | untriaged | normal | — | — | — |
-| [mizchi/moonix](https://github.com/mizchi/moonix) | mizchi/moonix | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |
+| [mizchi/moonix](https://github.com/mizchi/moonix) | mizchi/moonix | 2026-02-11 | dirty | equal | blocked | normal | 0.1.20260803 | 2026-08-15 | PR #1 removed unused root cst dependency; latest MoonBit check is blocked by pre-existing FileType Debug migration already present in the dirty local checkout |
 | [mizchi/moonlight](https://github.com/mizchi/moonlight) | mizchi/moonlight | 2026-04-07 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/nanobot.mbt](https://github.com/mizchi/nanobot.mbt) | mizchi/nanobot | 2026-02-10 | dirty | no-upstream | untriaged | normal | — | — | — |
 | [mizchi/nn](https://github.com/mizchi/nn) | mizchi/nn | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |

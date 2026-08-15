@@ -441,12 +441,16 @@
     "module": "moonbitlang/x"
   },
   {
-    "status": "untriaged",
+    "status": "blocked",
     "priority": "normal",
-    "notes": "",
-    "lastVerified": null,
-    "moonVersion": null,
-    "checks": {},
+    "notes": "PR #1 removed unused root cst dependency; latest MoonBit check is blocked by pre-existing FileType Debug migration already present in the dirty local checkout",
+    "lastVerified": "2026-08-15",
+    "moonVersion": "0.1.20260803",
+    "checks": {
+      "info": "passed",
+      "check": "blocked",
+      "pullRequest": "https://github.com/mizchi/moonix/pull/1"
+    },
     "lastCommit": "2026-02-11",
     "dirty": true,
     "upstream": "origin/main",

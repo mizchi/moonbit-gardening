@@ -91,20 +91,35 @@ export function isCanonicalGitHubRepository(repository) {
   return segments.length === 3 && segments[0] === "github.com";
 }
 
+function parseMoonMod(source) {
+  const match = source.match(/^\s*name\s*=\s*"([^"]+)"\s*$/m);
+  return { name: match?.[1] ?? null };
+}
+
+async function readManifest(repositoryPath) {
+  try {
+    return JSON.parse(
+      await readFile(`${repositoryPath}/moon.mod.json`, "utf8"),
+    );
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+
+  try {
+    return parseMoonMod(await readFile(`${repositoryPath}/moon.mod`, "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  }
+}
+
 export async function inspectRepository(
   repositoryPath,
   ghqRoot,
   inspectGit = inspectGitRepository,
 ) {
-  let manifest;
-  try {
-    manifest = JSON.parse(
-      await readFile(`${repositoryPath}/moon.mod.json`, "utf8"),
-    );
-  } catch (error) {
-    if (error.code === "ENOENT") return null;
-    throw error;
-  }
+  const manifest = await readManifest(repositoryPath);
+  if (manifest === null) return null;
 
   let gitState;
   try {

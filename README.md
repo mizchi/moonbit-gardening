@@ -60,7 +60,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/numbt](https://github.com/mizchi/numbt) | mizchi/numbt | 2026-05-27 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/oci_wasm](https://github.com/mizchi/oci_wasm) | mizchi/oci_wasm | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/pi_ext](https://github.com/mizchi/pi_ext) | mizchi/pi | 2026-04-26 | dirty | no-upstream | untriaged | normal | — | — | — |
-| [mizchi/pickle-mbt](https://github.com/mizchi/pickle-mbt) | mizchi/pkl | 2026-05-24 | clean | equal | blocked | normal | 0.1.20260803 | 2026-08-15 | Remote is mizchi/pkl-mbt; PR #30 updates cst 0.1.9 from current main; CLI-backed pkspec gate fails globally |
+| [mizchi/pickle-mbt](https://github.com/mizchi/pickle-mbt) | mizchi/pkl | 2026-05-24 | clean | equal | passing | normal | 0.1.20260803 | 2026-08-15 | Remote is mizchi/pkl-mbt; PR #30 merged cst 0.1.9 and core/env migration; all CI checks and pkspec contracts pass |
 | [mizchi/pkspec](https://github.com/mizchi/pkspec) | mizchi/pkspec | 2026-06-27 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/playwright.mbt](https://github.com/mizchi/playwright.mbt) | mizchi/playwright | 2026-03-20 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/s3](https://github.com/mizchi/s3) | mizchi/s3 | 2026-04-10 | dirty | equal | untriaged | normal | — | — | — |

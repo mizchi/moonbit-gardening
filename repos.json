@@ -539,9 +539,9 @@
     "module": "mizchi/pi"
   },
   {
-    "status": "blocked",
+    "status": "passing",
     "priority": "normal",
-    "notes": "Remote is mizchi/pkl-mbt; PR #30 updates cst 0.1.9 from current main; CLI-backed pkspec gate fails globally",
+    "notes": "Remote is mizchi/pkl-mbt; PR #30 merged cst 0.1.9 and core/env migration; all CI checks and pkspec contracts pass",
     "lastVerified": "2026-08-15",
     "moonVersion": "0.1.20260803",
     "checks": {

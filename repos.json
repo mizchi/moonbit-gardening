@@ -170,7 +170,7 @@
   {
     "status": "passing",
     "priority": "normal",
-    "notes": "PR #2; 9 immutable-array deprecation warnings remain",
+    "notes": "PR #2 merged; published 0.1.8; 10 deprecation warnings remain",
     "lastVerified": "2026-08-15",
     "moonVersion": "0.1.20260803",
     "checks": {
@@ -905,7 +905,7 @@
   {
     "status": "passing",
     "priority": "normal",
-    "notes": "PR #6; common checks pass; 21 existing warnings keep just release-check --deny-warn red",
+    "notes": "PR #6 merged; strict release-check passes; published 0.4.9",
     "lastVerified": "2026-08-15",
     "moonVersion": "0.1.20260803",
     "checks": {

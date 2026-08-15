@@ -170,7 +170,7 @@
   {
     "status": "passing",
     "priority": "normal",
-    "notes": "PR #2 merged; published 0.1.8; 10 deprecation warnings remain",
+    "notes": "PR #3 merged; warning-free strict checks; published 0.1.9",
     "lastVerified": "2026-08-15",
     "moonVersion": "0.1.20260803",
     "checks": {
@@ -539,12 +539,18 @@
     "module": "mizchi/pi"
   },
   {
-    "status": "untriaged",
+    "status": "blocked",
     "priority": "normal",
-    "notes": "",
-    "lastVerified": null,
-    "moonVersion": null,
-    "checks": {},
+    "notes": "Remote is mizchi/pkl-mbt; PR #29 updates cst 0.1.9 and yaml 0.0.6; existing full-project format drift remains",
+    "lastVerified": "2026-08-15",
+    "moonVersion": "0.1.20260803",
+    "checks": {
+      "fmt": "failed",
+      "check": "passed",
+      "test": "passed",
+      "build": "passed",
+      "pullRequest": "https://github.com/mizchi/pkl-mbt/pull/29"
+    },
     "lastCommit": "2026-05-24",
     "dirty": false,
     "upstream": "origin/main",

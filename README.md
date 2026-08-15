@@ -34,7 +34,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/cloudflare-starterkit-mbt](https://github.com/mizchi/cloudflare-starterkit-mbt) | mizchi/cloudflare-starterkit-mbt | 2026-05-19 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/cloudflare.mbt](https://github.com/mizchi/cloudflare.mbt) | mizchi/cloudflare | 2026-02-26 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/codegen.mbt](https://github.com/mizchi/codegen.mbt) | mizchi/codegen | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |
-| [mizchi/cst.mbt](https://github.com/mizchi/cst.mbt) | mizchi/cst | 2026-05-16 | clean | equal | passing | normal | 0.1.20260803 | 2026-08-15 | PR #2 merged; published 0.1.8; 10 deprecation warnings remain |
+| [mizchi/cst.mbt](https://github.com/mizchi/cst.mbt) | mizchi/cst | 2026-05-16 | clean | equal | passing | normal | 0.1.20260803 | 2026-08-15 | PR #3 merged; warning-free strict checks; published 0.1.9 |
 | [mizchi/differentiable_ecs](https://github.com/mizchi/differentiable_ecs) | mizchi/differentiable_ecs | 2026-06-03 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/flaker-cloud](https://github.com/mizchi/flaker-cloud) | mizchi/flaker-cloud | 2026-04-10 | clean | ahead | untriaged | normal | — | — | — |
 | [mizchi/github](https://github.com/mizchi/github) | mizchi/github | 2026-04-05 | dirty | equal | untriaged | normal | — | — | — |
@@ -60,7 +60,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/numbt](https://github.com/mizchi/numbt) | mizchi/numbt | 2026-05-27 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/oci_wasm](https://github.com/mizchi/oci_wasm) | mizchi/oci_wasm | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/pi_ext](https://github.com/mizchi/pi_ext) | mizchi/pi | 2026-04-26 | dirty | no-upstream | untriaged | normal | — | — | — |
-| [mizchi/pickle-mbt](https://github.com/mizchi/pickle-mbt) | mizchi/pkl | 2026-05-24 | clean | equal | untriaged | normal | — | — | — |
+| [mizchi/pickle-mbt](https://github.com/mizchi/pickle-mbt) | mizchi/pkl | 2026-05-24 | clean | equal | blocked | normal | 0.1.20260803 | 2026-08-15 | Remote is mizchi/pkl-mbt; PR #29 updates cst 0.1.9 and yaml 0.0.6; existing full-project format drift remains |
 | [mizchi/pkspec](https://github.com/mizchi/pkspec) | mizchi/pkspec | 2026-06-27 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/playwright.mbt](https://github.com/mizchi/playwright.mbt) | mizchi/playwright | 2026-03-20 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/s3](https://github.com/mizchi/s3) | mizchi/s3 | 2026-04-10 | dirty | equal | untriaged | normal | — | — | — |

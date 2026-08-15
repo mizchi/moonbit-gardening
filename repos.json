@@ -45,13 +45,19 @@
     "dependencies": []
   },
   {
-    "status": "untriaged",
+    "status": "passing",
     "priority": "normal",
-    "notes": "",
-    "lastVerified": null,
-    "moonVersion": null,
-    "checks": {},
-    "lastCommit": "2026-04-06",
+    "notes": "Latest MoonBit migration; strict checks pass on js, native, wasm, and wasm-gc; published 0.1.1",
+    "lastVerified": "2026-08-16",
+    "moonVersion": "0.1.20260807",
+    "checks": {
+      "fmt": "passed",
+      "info": "passed",
+      "check": "passed",
+      "test": "passed",
+      "build": "passed"
+    },
+    "lastCommit": "2026-08-16",
     "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",

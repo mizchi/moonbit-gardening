@@ -86,7 +86,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/wit-bindgen-moonbit](https://github.com/mizchi/wit-bindgen-moonbit) | mizchi/wit_bindgen_mbt | 2026-02-01 | dirty | no-upstream | untriaged | normal | — | — | — |
 | [mizchi/wite](https://github.com/mizchi/wite) | mizchi/wite | 2026-03-22 | dirty | diverged | untriaged | normal | — | — | — |
 | [mizchi/x-async](https://github.com/mizchi/x-async) | moonbitlang/async | 2026-01-26 | dirty | no-upstream | untriaged | normal | — | — | — |
-| [mizchi/zlib.mbt](https://github.com/mizchi/zlib.mbt) | mizchi/zlib | 2026-05-19 | clean | equal | untriaged | normal | — | — | — |
+| [mizchi/zlib.mbt](https://github.com/mizchi/zlib.mbt) | mizchi/zlib | 2026-05-19 | clean | equal | passing | normal | 0.1.20260803 | 2026-08-15 | PR #6; common checks pass; 21 existing warnings keep just release-check --deny-warn red |
 | [moonbit-community/postgres.mbt](https://github.com/moonbit-community/postgres.mbt) | myfreess/postgres | 2025-10-08 | clean | diverged | untriaged | normal | — | — | — |
 | [moonbit-community/wasip1](https://github.com/moonbit-community/wasip1) | peter-jerry-ye/wasi | 2026-01-07 | clean | behind | untriaged | normal | — | — | — |
 | [moonbit-community/wasip2](https://github.com/moonbit-community/wasip2) | mizchi/wasip2 | 2026-01-25 | clean | no-upstream | untriaged | normal | — | — | — |

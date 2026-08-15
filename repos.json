@@ -903,12 +903,19 @@
     "module": "moonbitlang/async"
   },
   {
-    "status": "untriaged",
+    "status": "passing",
     "priority": "normal",
-    "notes": "",
-    "lastVerified": null,
-    "moonVersion": null,
-    "checks": {},
+    "notes": "PR #6; common checks pass; 21 existing warnings keep just release-check --deny-warn red",
+    "lastVerified": "2026-08-15",
+    "moonVersion": "0.1.20260803",
+    "checks": {
+      "fmt": "passed",
+      "info": "passed",
+      "check": "passed",
+      "test": "passed",
+      "build": "passed",
+      "pullRequest": "https://github.com/mizchi/zlib.mbt/pull/6"
+    },
     "lastCommit": "2026-05-19",
     "dirty": false,
     "upstream": "origin/release/0.4.5",

@@ -156,6 +156,32 @@
     "dependencies": []
   },
   {
+    "status": "passing",
+    "priority": "normal",
+    "notes": "Latest MoonBit migration; js/native/wasm-gc strict checks and 150 tests pass; published 0.9.1",
+    "lastVerified": "2026-08-16",
+    "moonVersion": "0.1.20260807",
+    "checks": {
+      "fmt": "passed",
+      "info": "passed",
+      "check": "passed",
+      "test": "passed",
+      "build": "passed"
+    },
+    "lastCommit": "2026-08-16",
+    "dirty": false,
+    "upstream": "origin/main",
+    "sync": "equal",
+    "repository": "github.com/mizchi/canvas-mbt",
+    "module": "mizchi/canvas",
+    "dependencies": [
+      "mizchi/font",
+      "mizchi/image",
+      "moonbitlang/x",
+      "mizchi/pixelmatch"
+    ]
+  },
+  {
     "status": "untriaged",
     "priority": "normal",
     "notes": "",
@@ -546,19 +572,28 @@
     "dependencies": []
   },
   {
-    "status": "untriaged",
+    "status": "passing",
     "priority": "normal",
-    "notes": "",
-    "lastVerified": null,
-    "moonVersion": null,
-    "checks": {},
-    "lastCommit": "2026-05-26",
+    "notes": "Latest MoonBit and async 0.20.5 migration; JS 1405, Deno 53, Bun 29, wasm-gc 19, DOM 14 tests pass; published workspace 0.12.2",
+    "lastVerified": "2026-08-16",
+    "moonVersion": "0.1.20260807",
+    "checks": {
+      "fmt": "passed",
+      "info": "passed",
+      "check": "passed",
+      "test": "passed",
+      "build": "passed"
+    },
+    "lastCommit": "2026-08-16",
     "dirty": false,
     "upstream": "origin/main",
     "sync": "equal",
     "repository": "github.com/mizchi/js.mbt",
     "module": "mizchi/js",
-    "dependencies": []
+    "dependencies": [
+      "moonbitlang/async",
+      "tonyfettes/any"
+    ]
   },
   {
     "status": "untriaged",

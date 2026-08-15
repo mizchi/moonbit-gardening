@@ -37,6 +37,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/async](https://github.com/mizchi/async) | moonbitlang/async | 2026-05-21 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/blas](https://github.com/mizchi/blas) | mizchi/blas | 2026-08-15 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/brotli](https://github.com/mizchi/brotli) | mizchi/brotli | 2026-08-16 | clean | ahead | untriaged | normal | — | — | — |
+| [mizchi/canvas-mbt](https://github.com/mizchi/canvas-mbt) | mizchi/canvas | 2026-08-16 | clean | equal | passing | normal | 0.1.20260807 | 2026-08-16 | Latest MoonBit migration; js/native/wasm-gc strict checks and 150 tests pass; published 0.9.1 |
 | [mizchi/cloudflare-starterkit-mbt](https://github.com/mizchi/cloudflare-starterkit-mbt) | mizchi/cloudflare-starterkit-mbt | 2026-05-19 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/cloudflare.mbt](https://github.com/mizchi/cloudflare.mbt) | mizchi/cloudflare | 2026-08-16 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/codegen.mbt](https://github.com/mizchi/codegen.mbt) | mizchi/codegen | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |
@@ -60,7 +61,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/glfw-mbt](https://github.com/mizchi/glfw-mbt) | mizchi/glfw | 2026-08-16 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/image-mbt](https://github.com/mizchi/image-mbt) | mizchi/image | 2026-07-20 | clean | diverged | passing | normal | 0.1.20260803 | 2026-08-15 | PR #4 merged latest-MoonBit manifest and zlib updates; JS/native strict CI passes; mizchi/image 0.4.3 was already published |
 | [mizchi/inventory-game](https://github.com/mizchi/inventory-game) | mizchi/inventory-game | 2026-07-16 | clean | no-upstream | untriaged | normal | — | — | — |
-| [mizchi/js.mbt](https://github.com/mizchi/js.mbt) | mizchi/js | 2026-05-26 | clean | equal | untriaged | normal | — | — | — |
+| [mizchi/js.mbt](https://github.com/mizchi/js.mbt) | mizchi/js | 2026-08-16 | clean | equal | passing | normal | 0.1.20260807 | 2026-08-16 | Latest MoonBit and async 0.20.5 migration; JS 1405, Deno 53, Bun 29, wasm-gc 19, DOM 14 tests pass; published workspace 0.12.2 |
 | [mizchi/jwt.mbt](https://github.com/mizchi/jwt.mbt) | mizchi/jwt.mbt | 2026-02-03 | dirty | no-upstream | untriaged | normal | — | — | — |
 | [mizchi/kagura](https://github.com/mizchi/kagura) | mizchi/kagura | 2026-06-06 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/layout](https://github.com/mizchi/layout) | mizchi/layout | 2026-08-15 | clean | equal | untriaged | normal | — | — | — |

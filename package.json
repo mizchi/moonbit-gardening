@@ -1,0 +1,13 @@
+{
+  "name": "moonbit-gardening",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "refresh": "node scripts/refresh.mjs",
+    "render": "node scripts/render.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -541,15 +541,16 @@
   {
     "status": "blocked",
     "priority": "normal",
-    "notes": "Remote is mizchi/pkl-mbt; PR #29 updates cst 0.1.9 and yaml 0.0.6; existing full-project format drift remains",
+    "notes": "Remote is mizchi/pkl-mbt; PR #30 updates cst 0.1.9 from current main; CLI-backed pkspec gate fails globally",
     "lastVerified": "2026-08-15",
     "moonVersion": "0.1.20260803",
     "checks": {
-      "fmt": "failed",
+      "fmt": "passed",
+      "info": "passed",
       "check": "passed",
       "test": "passed",
       "build": "passed",
-      "pullRequest": "https://github.com/mizchi/pkl-mbt/pull/29"
+      "pullRequest": "https://github.com/mizchi/pkl-mbt/pull/30"
     },
     "lastCommit": "2026-05-24",
     "dirty": false,

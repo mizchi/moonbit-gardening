@@ -34,7 +34,7 @@ Statuses: `untriaged`, `reproduced`, `in-progress`, `blocked`, `passing`, and
 | [mizchi/cloudflare-starterkit-mbt](https://github.com/mizchi/cloudflare-starterkit-mbt) | mizchi/cloudflare-starterkit-mbt | 2026-05-19 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/cloudflare.mbt](https://github.com/mizchi/cloudflare.mbt) | mizchi/cloudflare | 2026-02-26 | dirty | equal | untriaged | normal | — | — | — |
 | [mizchi/codegen.mbt](https://github.com/mizchi/codegen.mbt) | mizchi/codegen | 2026-02-11 | dirty | equal | untriaged | normal | — | — | — |
-| [mizchi/cst.mbt](https://github.com/mizchi/cst.mbt) | mizchi/cst | 2026-05-16 | clean | equal | untriaged | normal | — | — | — |
+| [mizchi/cst.mbt](https://github.com/mizchi/cst.mbt) | mizchi/cst | 2026-05-16 | clean | equal | passing | normal | 0.1.20260803 | 2026-08-15 | PR #2; 9 immutable-array deprecation warnings remain |
 | [mizchi/differentiable_ecs](https://github.com/mizchi/differentiable_ecs) | mizchi/differentiable_ecs | 2026-06-03 | clean | equal | untriaged | normal | — | — | — |
 | [mizchi/flaker-cloud](https://github.com/mizchi/flaker-cloud) | mizchi/flaker-cloud | 2026-04-10 | clean | ahead | untriaged | normal | — | — | — |
 | [mizchi/github](https://github.com/mizchi/github) | mizchi/github | 2026-04-05 | dirty | equal | untriaged | normal | — | — | — |

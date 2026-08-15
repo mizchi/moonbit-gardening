@@ -168,12 +168,19 @@
     "module": "mizchi/codegen"
   },
   {
-    "status": "untriaged",
+    "status": "passing",
     "priority": "normal",
-    "notes": "",
-    "lastVerified": null,
-    "moonVersion": null,
-    "checks": {},
+    "notes": "PR #2; 9 immutable-array deprecation warnings remain",
+    "lastVerified": "2026-08-15",
+    "moonVersion": "0.1.20260803",
+    "checks": {
+      "fmt": "passed",
+      "info": "passed",
+      "check": "passed",
+      "test": "passed",
+      "build": "passed",
+      "pullRequest": "https://github.com/mizchi/cst.mbt/pull/2"
+    },
     "lastCommit": "2026-05-16",
     "dirty": false,
     "upstream": "origin/main",
